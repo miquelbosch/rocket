@@ -13,6 +13,6 @@ final class AppServiceLocator {
     // MARK: - Variables
     private(set) lazy var appLogicServiceLocator = RocketLogicServiceLocator(navigationController: navigationController)
     private(set) lazy var navigationController: UINavigationController = {
-        return UINavigationController()
+        return RocketsNavigationController()
     }()
 }
