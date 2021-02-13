@@ -12,6 +12,6 @@ public final class TestMath {
     public init() {}
     
     public func printText() {
-        
+
     }
 }

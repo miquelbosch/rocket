@@ -21,6 +21,7 @@
 		6F8BA52E25D7DBED00EE7E2F /* RocketLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8BA51925D7DBED00EE7E2F /* RocketLogic.framework */; };
 		6F8BA52F25D7DBED00EE7E2F /* RocketLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8BA51925D7DBED00EE7E2F /* RocketLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6F8BA53D25D7DCD300EE7E2F /* TestMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA53C25D7DCD300EE7E2F /* TestMath.swift */; };
+		6F8BA56025D7E88900EE7E2F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F8BA56225D7E88900EE7E2F /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		6F8BA52825D7DBED00EE7E2F /* RocketLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLogicTests.swift; sourceTree = "<group>"; };
 		6F8BA52A25D7DBED00EE7E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F8BA53C25D7DCD300EE7E2F /* TestMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMath.swift; sourceTree = "<group>"; };
+		6F8BA56125D7E88900EE7E2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				6F8BA3C925D7D28B00EE7E2F /* Assets.xcassets */,
 				6F8BA3CB25D7D28B00EE7E2F /* LaunchScreen.storyboard */,
 				6F8BA3CE25D7D28B00EE7E2F /* Info.plist */,
+				6F8BA56225D7E88900EE7E2F /* Localizable.strings */,
 			);
 			path = Rocket;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F8BA3CD25D7D28B00EE7E2F /* LaunchScreen.storyboard in Resources */,
+				6F8BA56025D7E88900EE7E2F /* Localizable.strings in Resources */,
 				6F8BA3CA25D7D28B00EE7E2F /* Assets.xcassets in Resources */,
 				6F8BA3C825D7D28900EE7E2F /* Main.storyboard in Resources */,
 			);
@@ -531,6 +535,14 @@
 				6F8BA3CC25D7D28B00EE7E2F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6F8BA56225D7E88900EE7E2F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F8BA56125D7E88900EE7E2F /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
