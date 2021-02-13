@@ -10,7 +10,6 @@
 		6F8BA3C125D7D28900EE7E2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA3C025D7D28900EE7E2F /* AppDelegate.swift */; };
 		6F8BA3C325D7D28900EE7E2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA3C225D7D28900EE7E2F /* SceneDelegate.swift */; };
 		6F8BA3C525D7D28900EE7E2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA3C425D7D28900EE7E2F /* ViewController.swift */; };
-		6F8BA3C825D7D28900EE7E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8BA3C625D7D28900EE7E2F /* Main.storyboard */; };
 		6F8BA3CA25D7D28B00EE7E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F8BA3C925D7D28B00EE7E2F /* Assets.xcassets */; };
 		6F8BA3CD25D7D28B00EE7E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8BA3CB25D7D28B00EE7E2F /* LaunchScreen.storyboard */; };
 		6F8BA3D825D7D28C00EE7E2F /* RocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA3D725D7D28C00EE7E2F /* RocketTests.swift */; };
@@ -22,6 +21,10 @@
 		6F8BA52F25D7DBED00EE7E2F /* RocketLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8BA51925D7DBED00EE7E2F /* RocketLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6F8BA53D25D7DCD300EE7E2F /* TestMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA53C25D7DCD300EE7E2F /* TestMath.swift */; };
 		6F8BA56025D7E88900EE7E2F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F8BA56225D7E88900EE7E2F /* Localizable.strings */; };
+		6F8BA57125D7EDD000EE7E2F /* RocketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA57025D7EDD000EE7E2F /* RocketListViewController.swift */; };
+		6F8BA57825D7EE6000EE7E2F /* RocketLogicServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA57725D7EE6000EE7E2F /* RocketLogicServiceLocator.swift */; };
+		6F8BA58225D7EF1E00EE7E2F /* RocketsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA58125D7EF1E00EE7E2F /* RocketsListCoordinator.swift */; };
+		6F8BA58925D8247000EE7E2F /* AppServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA58825D8247000EE7E2F /* AppServiceLocator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +84,6 @@
 		6F8BA3C025D7D28900EE7E2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F8BA3C225D7D28900EE7E2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6F8BA3C425D7D28900EE7E2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6F8BA3C725D7D28900EE7E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F8BA3C925D7D28B00EE7E2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F8BA3CC25D7D28B00EE7E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F8BA3CE25D7D28B00EE7E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,6 +101,10 @@
 		6F8BA52A25D7DBED00EE7E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F8BA53C25D7DCD300EE7E2F /* TestMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMath.swift; sourceTree = "<group>"; };
 		6F8BA56125D7E88900EE7E2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6F8BA57025D7EDD000EE7E2F /* RocketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListViewController.swift; sourceTree = "<group>"; };
+		6F8BA57725D7EE6000EE7E2F /* RocketLogicServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLogicServiceLocator.swift; sourceTree = "<group>"; };
+		6F8BA58125D7EF1E00EE7E2F /* RocketsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListCoordinator.swift; sourceTree = "<group>"; };
+		6F8BA58825D8247000EE7E2F /* AppServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServiceLocator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,9 +178,9 @@
 				6F8BA3C025D7D28900EE7E2F /* AppDelegate.swift */,
 				6F8BA3C225D7D28900EE7E2F /* SceneDelegate.swift */,
 				6F8BA3C425D7D28900EE7E2F /* ViewController.swift */,
-				6F8BA3C625D7D28900EE7E2F /* Main.storyboard */,
 				6F8BA3CB25D7D28B00EE7E2F /* LaunchScreen.storyboard */,
 				6F8BA3CE25D7D28B00EE7E2F /* Info.plist */,
+				6F8BA58725D8245400EE7E2F /* ServiceLocator */,
 				6F8BA56725D7EC0B00EE7E2F /* Resources */,
 			);
 			path = Rocket;
@@ -201,6 +207,9 @@
 		6F8BA51A25D7DBED00EE7E2F /* RocketLogic */ = {
 			isa = PBXGroup;
 			children = (
+				6F8BA59225D824AB00EE7E2F /* Utils */,
+				6F8BA57625D7EE3F00EE7E2F /* ServiceLocator */,
+				6F8BA56C25D7ED0400EE7E2F /* Features */,
 				6F8BA53C25D7DCD300EE7E2F /* TestMath.swift */,
 				6F8BA53B25D7DC1400EE7E2F /* HeaderFiles */,
 			);
@@ -232,6 +241,70 @@
 				6F8BA56225D7E88900EE7E2F /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6F8BA56C25D7ED0400EE7E2F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				6F8BA56D25D7ED0F00EE7E2F /* RocketsList */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		6F8BA56D25D7ED0F00EE7E2F /* RocketsList */ = {
+			isa = PBXGroup;
+			children = (
+				6F8BA56F25D7ED7900EE7E2F /* ViewController */,
+				6F8BA56E25D7ED5700EE7E2F /* Coordinator */,
+			);
+			path = RocketsList;
+			sourceTree = "<group>";
+		};
+		6F8BA56E25D7ED5700EE7E2F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6F8BA58125D7EF1E00EE7E2F /* RocketsListCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		6F8BA56F25D7ED7900EE7E2F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6F8BA57025D7EDD000EE7E2F /* RocketListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6F8BA57625D7EE3F00EE7E2F /* ServiceLocator */ = {
+			isa = PBXGroup;
+			children = (
+				6F8BA57725D7EE6000EE7E2F /* RocketLogicServiceLocator.swift */,
+			);
+			path = ServiceLocator;
+			sourceTree = "<group>";
+		};
+		6F8BA58725D8245400EE7E2F /* ServiceLocator */ = {
+			isa = PBXGroup;
+			children = (
+				6F8BA58825D8247000EE7E2F /* AppServiceLocator.swift */,
+			);
+			path = ServiceLocator;
+			sourceTree = "<group>";
+		};
+		6F8BA59225D824AB00EE7E2F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6F8BA59325D824B800EE7E2F /* Protocols */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6F8BA59325D824B800EE7E2F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,7 +474,6 @@
 				6F8BA3CD25D7D28B00EE7E2F /* LaunchScreen.storyboard in Resources */,
 				6F8BA56025D7E88900EE7E2F /* Localizable.strings in Resources */,
 				6F8BA3CA25D7D28B00EE7E2F /* Assets.xcassets in Resources */,
-				6F8BA3C825D7D28900EE7E2F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F8BA58925D8247000EE7E2F /* AppServiceLocator.swift in Sources */,
 				6F8BA3C525D7D28900EE7E2F /* ViewController.swift in Sources */,
 				6F8BA3C125D7D28900EE7E2F /* AppDelegate.swift in Sources */,
 				6F8BA3C325D7D28900EE7E2F /* SceneDelegate.swift in Sources */,
@@ -486,7 +559,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F8BA57125D7EDD000EE7E2F /* RocketListViewController.swift in Sources */,
 				6F8BA53D25D7DCD300EE7E2F /* TestMath.swift in Sources */,
+				6F8BA58225D7EF1E00EE7E2F /* RocketsListCoordinator.swift in Sources */,
+				6F8BA57825D7EE6000EE7E2F /* RocketLogicServiceLocator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,14 +605,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6F8BA3C625D7D28900EE7E2F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6F8BA3C725D7D28900EE7E2F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6F8BA3CB25D7D28B00EE7E2F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
