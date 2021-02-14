@@ -20,6 +20,8 @@ class RocketListViewController: UIViewController {
         private init() {}
         static let activityIndicatorHeight: CGFloat = 46
         static let activityIndicatorInitialPosition: CGFloat = 0
+        static let marginXTable: CGFloat = 26
+        static let marginYTable: CGFloat = 0
     }
 
     // MARK: - User Interface
@@ -28,8 +30,11 @@ class RocketListViewController: UIViewController {
         let tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.name)
+        tableView.register(RocketTableViewCell.self, forCellReuseIdentifier: RocketTableViewCell.name)
+        tableView.contentInset = UIEdgeInsets(top: Constants.marginXTable, left: Constants.marginYTable,
+                                              bottom: -Constants.marginXTable, right: Constants.marginYTable)
         return tableView
     }()
 
@@ -42,18 +47,34 @@ class RocketListViewController: UIViewController {
         return activityIndicatorView
     }()
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
         title = "rocket_app_name".localize
-        //setupTableView()
+        setupTableView()
         showLoading()
     }
 
+    // MARK: - Setups
     private func setupTableView() {
         view.addSubview(tableView)
-        tableView.anchorTo(view)
+        tableView.anchor(top: view.topAnchor,
+                         bottom: view.bottomAnchor,
+                         left: view.leftAnchor,
+                         right: view.rightAnchor)
+    }
+
+    private func animationCellWhenPush(cell: UITableViewCell) {
+
+        cell.transform = CGAffineTransform.identity
+
+        UIView.animate(withDuration: 0.2, animations: {
+            cell.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+        }, completion: { _ in
+            cell.transform = CGAffineTransform.identity
+        })
     }
 }
 
@@ -65,12 +86,26 @@ extension RocketListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.name, for: indexPath)
-        cell.backgroundColor = .blue
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RocketTableViewCell.name, for: indexPath) as? RocketTableViewCell else {
+            fatalError("Coldn't load \(RocketTableViewCell.name) Cell")
+        }
+        
+        cell.selectionStyle = .none
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        guard let cell = tableView.cellForRow(at: indexPath) as? RocketTableViewCell else {
+            return
+        }
+
+        animationCellWhenPush(cell: cell)
     }
 }
 
+// MARK: - View Protocols
 extension RocketListViewController: RocketListView {
 
     func showLoading() {
