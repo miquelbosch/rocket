@@ -20,6 +20,7 @@ struct Rocket {
     let description: String
     let country: String
     let company: String
+    let image: String
 }
 
 // MARK: - Bind For Response of Rockets Service
@@ -38,7 +39,8 @@ internal final class RocketsResponseBinding {
                           firstFlight: "Change",
                           description: $0.description ??  "-",
                           country: $0.country ??  "-",
-                          company: $0.company ??  "-")
+                          company: $0.company ??  "-",
+                          image: $0.flickrImages?.first ?? "-")
         }
 
         return Rockets(rockets: rockets)

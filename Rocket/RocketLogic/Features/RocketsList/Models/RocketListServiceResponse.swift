@@ -17,6 +17,7 @@ struct RocketListServiceResponse: Codable {
     let description: String?
     let country: String?
     let company: String?
+    let flickrImages: [String]?
 
     // MARK: - Keys
     enum CodingKeys: String, CodingKey {
@@ -27,6 +28,7 @@ struct RocketListServiceResponse: Codable {
         case description
         case country
         case company
+        case flickrImages = "flickr_images"
     }
 }
 

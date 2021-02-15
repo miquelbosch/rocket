@@ -41,7 +41,7 @@ class RocketTableViewCell: UITableViewCell {
 
     fileprivate lazy var rocketImageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleToFill
         imageView.image = UIImage(named: "Rocket")
         imageView.alpha = 0.3
         return imageView
@@ -67,6 +67,7 @@ class RocketTableViewCell: UITableViewCell {
 
     public func setup(rocket: Rocket) {
         titleLabel.text = rocket.name
+        setImageView(name: rocket.image)
     }
 
     private func constraintsCardView() {
@@ -111,5 +112,14 @@ class RocketTableViewCell: UITableViewCell {
                           right: cardBorderView.rightAnchor,
                           leftConstant: Constants.marginLabelToImage,
                           rightConstant: Constants.marginLabelToImage)
+    }
+
+    private func setImageView(name: String) {
+
+        guard let url = URL(string: name) else {
+            fatalError("There is a problem loading the image: \(name)")
+        }
+
+        rocketImageView.load(url: url)
     }
 }
