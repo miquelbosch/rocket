@@ -11,6 +11,7 @@ internal protocol RocketListViewModelProtocol: class {
 
     var view: RocketListView? { get set }
     func loadView()
+    func displayTitleHeader()
     func fetchRockets()
 }
 
@@ -31,9 +32,13 @@ extension RocketListViewModel: RocketListViewModelProtocol {
 
     func loadView() {
 
-        view?.title = "rocket_app_name".localize
+        displayTitleHeader()
         view?.showLoading()
         fetchRockets()
+    }
+
+    func displayTitleHeader() {
+        view?.title = "rocket_app_name".localize
     }
 
     func fetchRockets() {

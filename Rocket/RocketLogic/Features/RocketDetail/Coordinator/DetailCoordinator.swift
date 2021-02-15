@@ -37,7 +37,6 @@ extension DetailCoordinator: DetailRouting {
     func displayDetail(rocket: Rocket) {
 
         let rocketDetailViewController = detailViewController(selected: rocket)
-        navigationController.navigationBar.topItem?.title = Constants.CrossFeature.noData
         navigationController.pushViewController(rocketDetailViewController, animated: true)
     }
 }

@@ -23,6 +23,8 @@ public class RocketsNavigationController: UINavigationController {
 
     // MARK: - Setup
     private func setup() {
+        
+        delegate = self
         navigationBar.isTranslucent = true
         navigationBar.tintColor = .white
         navigationBar.barStyle = .default
@@ -30,5 +32,14 @@ public class RocketsNavigationController: UINavigationController {
         navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
     }
+}
 
+// MARK: - UINavigationControllerDelegate
+extension RocketsNavigationController: UINavigationControllerDelegate {
+
+    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+
+        let item = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        viewController.navigationItem.backBarButtonItem = item
+    }
 }

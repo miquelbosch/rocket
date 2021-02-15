@@ -21,7 +21,6 @@ class RocketListViewController: UIViewController {
     private let viewModel: RocketListViewModelProtocol
     private let detailRouting: DetailRouting
 
-
     private var rockets: [Rocket] = []
 
     // MARK: - Constants
