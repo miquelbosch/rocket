@@ -16,7 +16,7 @@ struct Rocket {
     let height: Units
     let engines: Engines
     let name: String
-    let firstFlight: String
+    let firstFlight: Date
     let description: String
     let country: String
     let company: String
@@ -28,19 +28,18 @@ internal final class RocketsResponseBinding {
 
     class func bind(_ rocketsRespone: [RocketListServiceResponse]) -> Rockets {
 
-        //var rockets: [Rocket] = []
-
         let rockets: [Rocket] = rocketsRespone.map {
-            let units = Units(meters: Double(0), feet: Double(0))
-            let engines = Engines(number: 0)
-            return Rocket(height: $0.height ??  units,
-                          engines: $0.engines ?? engines,
-                          name: $0.name ??  "-",
-                          firstFlight: "Change",
-                          description: $0.description ??  "-",
-                          country: $0.country ??  "-",
-                          company: $0.company ??  "-",
-                          image: $0.flickrImages?.first ?? "-")
+            let defaultUnits = Constants.RocketDefault.units
+            let defaultengines = Constants.RocketDefault.engines
+            let firstFlight =  $0.firstFlight ?? Constants.CrossFeature.nilChar
+            return Rocket(height: $0.height ?? defaultUnits,
+                          engines: $0.engines ?? defaultengines,
+                          name: $0.name ?? Constants.CrossFeature.nilChar,
+                          firstFlight: DateManager.date(original: firstFlight, to: .yyyyMMdd),
+                          description: $0.description ?? Constants.CrossFeature.nilChar,
+                          country: $0.country ?? Constants.CrossFeature.nilChar,
+                          company: $0.company ?? Constants.CrossFeature.nilChar,
+                          image: $0.flickrImages?.first ?? Constants.CrossFeature.nilChar)
         }
 
         return Rockets(rockets: rockets)
