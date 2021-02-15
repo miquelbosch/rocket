@@ -13,7 +13,8 @@ final public class RocketLogicServiceLocator {
     private let navigationController: UINavigationController
 
     // MARK: - Variables
-    public private(set) lazy var rocketsListCoordinator = RocketsListCoordinator(webServiceLocator: webService)
+    public private(set) lazy var rocketsListCoordinator = RocketsListCoordinator(webServiceLocator: webService, detailRouting: detailViewController)
+    private(set) lazy var detailViewController = DetailCoordinator(navigationController: navigationController)
     private(set) lazy var webService = WebServiceLocator()
 
     // MARK: - Initializers

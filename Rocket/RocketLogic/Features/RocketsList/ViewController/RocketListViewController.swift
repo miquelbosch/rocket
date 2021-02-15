@@ -18,7 +18,9 @@ internal protocol RocketListView: class {
 class RocketListViewController: UIViewController {
 
     // MARK: - Propierties
-    let viewModel: RocketListViewModelProtocol
+    private let viewModel: RocketListViewModelProtocol
+    private let detailRouting: DetailRouting
+
 
     private var rockets: [Rocket] = []
 
@@ -60,8 +62,9 @@ class RocketListViewController: UIViewController {
     }()
 
     // MARK: - Initializers
-    init(viewModel: RocketListViewModelProtocol) {
+    init(viewModel: RocketListViewModelProtocol, detailRouting: DetailRouting) {
         self.viewModel = viewModel
+        self.detailRouting = detailRouting
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
 
@@ -87,7 +90,9 @@ class RocketListViewController: UIViewController {
                          right: view.rightAnchor)
     }
 
-    private func animationCellWhenPush(cell: UITableViewCell) {
+    private func animationCellWhenPush(cell: UITableViewCell, indexPath: IndexPath) {
+
+        let rocket = rockets[indexPath.row]
 
         cell.transform = CGAffineTransform.identity
 
@@ -95,6 +100,7 @@ class RocketListViewController: UIViewController {
             cell.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
         }, completion: { _ in
             cell.transform = CGAffineTransform.identity
+            self.detailRouting.displayDetail(rocket: rocket)
         })
     }
 }
@@ -109,7 +115,7 @@ extension RocketListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RocketTableViewCell.name, for: indexPath) as? RocketTableViewCell else {
-            fatalError("Coldn't load \(RocketTableViewCell.name) Cell")
+            fatalError("Couldn't load \(RocketTableViewCell.name) Cell")
         }
 
         let rocket = rockets[indexPath.row]
@@ -124,7 +130,7 @@ extension RocketListViewController: UITableViewDelegate, UITableViewDataSource {
             return
         }
 
-        animationCellWhenPush(cell: cell)
+        animationCellWhenPush(cell: cell, indexPath: indexPath)
     }
 }
 

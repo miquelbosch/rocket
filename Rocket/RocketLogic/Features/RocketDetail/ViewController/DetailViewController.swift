@@ -7,8 +7,18 @@
 
 import UIKit
 
+internal protocol DetailView: class {
+    var title: String? { get set }
+    func showImage(url: URL)
+}
+
 class DetailViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    @IBOutlet weak var rocketImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     // MARK: - propierties
     private let viewModel: DetailViewModelProtocol
 
@@ -27,4 +37,14 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
     }
+}
+
+// MARK: - DetailView
+extension DetailViewController: DetailView {
+
+    func showImage(url: URL) {
+        <#code#>
+    }
+
+
 }

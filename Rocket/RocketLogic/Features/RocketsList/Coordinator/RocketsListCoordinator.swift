@@ -11,15 +11,17 @@ final public class RocketsListCoordinator {
 
     // MARK: - Propierties
     private let webServiceLocator: WebServiceLocator
+    private let detailRouting: DetailRouting
 
     // MARK: - Initializers
-    init(webServiceLocator: WebServiceLocator) {
+    init(webServiceLocator: WebServiceLocator, detailRouting: DetailRouting) {
         self.webServiceLocator = webServiceLocator
+        self.detailRouting = detailRouting
     }
 
     // MARK: - Public methods
     public func viewController() -> UIViewController {
-        return RocketListViewController(viewModel: viewModel())
+        return RocketListViewController(viewModel: viewModel(), detailRouting: detailRouting)
     }
 
     // MARK: - ViewModel

@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="RocketLogic" customModuleProvider="target">
             <connections>
+                <outlet property="descriptionLabel" destination="rcH-FI-Eld" id="Knh-xH-9Kt"/>
+                <outlet property="rocketImageView" destination="Mwl-Sn-kzJ" id="7DX-lB-Kbg"/>
+                <outlet property="titleLabel" destination="8kD-Ve-KFe" id="znl-5T-9sd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
