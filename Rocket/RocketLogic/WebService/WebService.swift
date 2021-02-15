@@ -47,7 +47,7 @@ internal final class WebService {
                     if let result = try? decoder.decode(T.self, from: data) {
                         completed(.success(result))
                     } else {
-                        completed(.failure(.server))
+                        completed(.failure(.mapping))
                     }
                 } else {
                     completed(.failure(.server))

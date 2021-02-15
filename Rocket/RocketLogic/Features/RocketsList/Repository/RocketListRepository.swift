@@ -8,7 +8,7 @@
 import Foundation
 
 internal protocol RocketListRepositoryProtocol: class {
-    func rocketList(completion completed: @escaping (Result<Rocket, ResponseError>) -> Void)
+    func rocketList(completion completed: @escaping (Result<Rockets, ResponseError>) -> Void)
 }
 
 internal final class RocketListRepository {
@@ -25,14 +25,14 @@ internal final class RocketListRepository {
 // MARK: - RocketListRepositoryProtocol
 extension RocketListRepository: RocketListRepositoryProtocol {
 
-    func rocketList(completion completed: @escaping (Result<Rocket, ResponseError>) -> Void) {
-        webService.fetch(RocketListServiceResponse.self, from: .rockets) { response in
+    func rocketList(completion completed: @escaping (Result<Rockets, ResponseError>) -> Void) {
+        webService.fetch([RocketListServiceResponse].self, from: .rockets) { response in
             print(response)
             DispatchQueue.main.async {
                 switch response {
-                case .success(let rockets):
-                    break
-                    //completed(.success(rockets))
+                case .success(let rocketsResponse):
+                    let rockets = RocketsResponseBinding.bind(rocketsResponse)
+                    completed(.success(rockets))
                 case .failure(let error):
                     completed(.failure(error))
                 }

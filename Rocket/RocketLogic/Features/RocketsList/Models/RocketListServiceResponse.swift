@@ -13,8 +13,8 @@ struct RocketListServiceResponse: Codable {
     let height: Units?
     let engines: Engines?
     let name: String?
-    let description: String?
     let firstFlight: String?
+    let description: String?
     let country: String?
     let company: String?
 
@@ -28,6 +28,10 @@ struct RocketListServiceResponse: Codable {
         case country
         case company
     }
+}
+
+struct RocketResponse: Codable {
+    let height: Units?
 }
 
 // MARK: - Units

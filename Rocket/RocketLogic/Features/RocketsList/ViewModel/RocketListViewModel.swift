@@ -38,18 +38,15 @@ extension RocketListViewModel: RocketListViewModelProtocol {
 
     func fetchRockets() {
         repository.rocketList { [weak self] result in
-            debugPrint(result)
 
             guard let `self` = self else { return }
             switch result {
-            case .success(let rockets):
-                print(rockets)
+            case .success(let list):
                 self.view?.hideLoading()
-                self.view?.showError(type: .general)
+                self.view?.update(rockets: list.rockets)
             case .failure(let error):
-                print(error.localizedDescription)
                 self.view?.hideLoading()
-                self.view?.showError(type: .general)
+                self.view?.showError(type: error)
             }
         }
     }

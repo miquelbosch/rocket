@@ -65,6 +65,10 @@ class RocketTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    public func setup(rocket: Rocket) {
+        titleLabel.text = rocket.name
+    }
+
     private func constraintsCardView() {
 
         contentView.addSubview(cardView)
@@ -107,7 +111,5 @@ class RocketTableViewCell: UITableViewCell {
                           right: cardBorderView.rightAnchor,
                           leftConstant: Constants.marginLabelToImage,
                           rightConstant: Constants.marginLabelToImage)
-
-        titleLabel.text = "Falcon 1"
     }
 }

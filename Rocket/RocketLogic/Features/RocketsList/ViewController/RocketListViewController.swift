@@ -12,12 +12,15 @@ internal protocol RocketListView: class {
     func showLoading()
     func hideLoading()
     func showError(type: ResponseError)
+    func update(rockets: [Rocket])
 }
 
 class RocketListViewController: UIViewController {
 
     // MARK: - Propierties
     let viewModel: RocketListViewModelProtocol
+
+    private var rockets: [Rocket] = []
 
     // MARK: - Constants
     private struct Constants {
@@ -100,7 +103,7 @@ class RocketListViewController: UIViewController {
 extension RocketListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return rockets.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -108,7 +111,9 @@ extension RocketListViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RocketTableViewCell.name, for: indexPath) as? RocketTableViewCell else {
             fatalError("Coldn't load \(RocketTableViewCell.name) Cell")
         }
-        
+
+        let rocket = rockets[indexPath.row]
+        cell.setup(rocket: rocket)
         cell.selectionStyle = .none
         return cell
     }
@@ -143,5 +148,11 @@ extension RocketListViewController: RocketListView {
                          right: view.rightAnchor)
 
         errorView.setup(errorType: type)
+    }
+
+    func update(rockets: [Rocket]) {
+
+        self.rockets = rockets
+        setupTableView()
     }
 }
