@@ -30,4 +30,5 @@ public class RocketsNavigationController: UINavigationController {
         navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
     }
+
 }

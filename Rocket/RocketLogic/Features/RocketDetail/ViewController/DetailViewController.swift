@@ -36,6 +36,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel.view = self
+        viewModel.setup()
     }
 }
 
@@ -43,8 +45,6 @@ class DetailViewController: UIViewController {
 extension DetailViewController: DetailView {
 
     func showImage(url: URL) {
-        <#code#>
+        rocketImageView.load(url: url)
     }
-
-
 }
