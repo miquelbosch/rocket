@@ -26,6 +26,7 @@ final class DetailViewModel: DetailViewModelProtocol {
     func setup() {
         setupTitle()
         setupImage()
+        setInformation()
     }
 
     private func setupTitle() {
@@ -35,5 +36,10 @@ final class DetailViewModel: DetailViewModelProtocol {
     private func setupImage() {
         guard let url = URL(string: rocket.image) else { return }
         view?.showImage(url: url)
+    }
+
+    private func setInformation() {
+        let firstFlight = DateManager.date(original: rocket.firstFlight, to: .ddMMyyyy)
+        view?.showPrincipalInformation(rocket: rocket, firstFlight: firstFlight)
     }
 }

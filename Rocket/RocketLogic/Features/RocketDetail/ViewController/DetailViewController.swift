@@ -10,6 +10,7 @@ import UIKit
 internal protocol DetailView: class {
     var title: String? { get set }
     func showImage(url: URL)
+    func showPrincipalInformation(rocket: Rocket, firstFlight: String)
 }
 
 class DetailViewController: UIViewController {
@@ -18,7 +19,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var rocketImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+    @IBOutlet weak var firstFlightTitleLabel: UILabel!
+    @IBOutlet weak var firstFlightValue: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var countryValue: UILabel!
+
     // MARK: - propierties
     private let viewModel: DetailViewModelProtocol
 
@@ -46,5 +51,13 @@ extension DetailViewController: DetailView {
 
     func showImage(url: URL) {
         rocketImageView.load(url: url)
+        rocketImageView.round(.bottomRight, radius: CGFloat(76))
+    }
+
+    func showPrincipalInformation(rocket: Rocket, firstFlight: String) {
+        titleLabel.text = rocket.name
+        descriptionLabel.text = rocket.description
+        firstFlightValue.text = firstFlight
+        countryValue.text = rocket.country
     }
 }
