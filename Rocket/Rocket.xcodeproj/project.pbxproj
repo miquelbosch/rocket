@@ -14,6 +14,19 @@
 		6F1FC33B25D894F100484116 /* RocketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1FC33A25D894F100484116 /* RocketTableViewCell.swift */; };
 		6F4174FD25D83D4E00E95CBC /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4174FC25D83D4E00E95CBC /* NSObject.swift */; };
 		6F41750325D83F4700E95CBC /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F41750225D83F4700E95CBC /* UIView.swift */; };
+		6F7A761525D99B990039019B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A761425D99B990039019B /* Endpoint.swift */; };
+		6F7A762225D9A3AA0039019B /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A762125D9A3AA0039019B /* ServiceError.swift */; };
+		6F7A762825D9A5FE0039019B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A762725D9A5FE0039019B /* WebService.swift */; };
+		6F7A762E25D9AB7F0039019B /* WebServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A762D25D9AB7F0039019B /* WebServiceLocator.swift */; };
+		6F7A763525D9AD7D0039019B /* RocketListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A763425D9AD7D0039019B /* RocketListRepository.swift */; };
+		6F7A764025D9AF250039019B /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A763F25D9AF250039019B /* Rocket.swift */; };
+		6F7A764A25D9AF5B0039019B /* RocketListServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A764925D9AF5B0039019B /* RocketListServiceResponse.swift */; };
+		6F7A765125D9EC740039019B /* RocketListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A765025D9EC740039019B /* RocketListViewModel.swift */; };
+		6F7A765E25D9FCAF0039019B /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F7A765D25D9FCAF0039019B /* ErrorView.xib */; };
+		6F7A766425D9FCC50039019B /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A766325D9FCC50039019B /* ErrorView.swift */; };
+		6F7A766A25DA00620039019B /* NibViewLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A766925DA00620039019B /* NibViewLoad.swift */; };
+		6F7A767125DA00BB0039019B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A767025DA00BB0039019B /* Constants.swift */; };
+		6F7A768425DA08B50039019B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F7A768325DA08B50039019B /* Assets.xcassets */; };
 		6F8BA3C125D7D28900EE7E2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA3C025D7D28900EE7E2F /* AppDelegate.swift */; };
 		6F8BA3C325D7D28900EE7E2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA3C225D7D28900EE7E2F /* SceneDelegate.swift */; };
 		6F8BA3C525D7D28900EE7E2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA3C425D7D28900EE7E2F /* ViewController.swift */; };
@@ -93,6 +106,19 @@
 		6F1FC33A25D894F100484116 /* RocketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketTableViewCell.swift; sourceTree = "<group>"; };
 		6F4174FC25D83D4E00E95CBC /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		6F41750225D83F4700E95CBC /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		6F7A761425D99B990039019B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		6F7A762125D9A3AA0039019B /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		6F7A762725D9A5FE0039019B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		6F7A762D25D9AB7F0039019B /* WebServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceLocator.swift; sourceTree = "<group>"; };
+		6F7A763425D9AD7D0039019B /* RocketListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListRepository.swift; sourceTree = "<group>"; };
+		6F7A763F25D9AF250039019B /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		6F7A764925D9AF5B0039019B /* RocketListServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListServiceResponse.swift; sourceTree = "<group>"; };
+		6F7A765025D9EC740039019B /* RocketListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListViewModel.swift; sourceTree = "<group>"; };
+		6F7A765D25D9FCAF0039019B /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		6F7A766325D9FCC50039019B /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		6F7A766925DA00620039019B /* NibViewLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibViewLoad.swift; sourceTree = "<group>"; };
+		6F7A767025DA00BB0039019B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6F7A768325DA08B50039019B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F8BA3BD25D7D28900EE7E2F /* Rocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F8BA3C025D7D28900EE7E2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F8BA3C225D7D28900EE7E2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,7 +205,8 @@
 		6F1FC30D25D8514E00484116 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6F1FC30E25D8519100484116 /* RocketsNavigationController.swift */,
+				6F7A765B25D9FC910039019B /* Views */,
+				6F7A765A25D9FC820039019B /* NavigationController */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -208,6 +235,83 @@
 				6F1FC32F25D8590000484116 /* Strings.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6F7A761325D99B710039019B /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				6F7A761425D99B990039019B /* Endpoint.swift */,
+				6F7A762125D9A3AA0039019B /* ServiceError.swift */,
+				6F7A762725D9A5FE0039019B /* WebService.swift */,
+				6F7A762D25D9AB7F0039019B /* WebServiceLocator.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		6F7A763325D9AD5E0039019B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				6F7A763425D9AD7D0039019B /* RocketListRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		6F7A763E25D9AEA00039019B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6F7A763F25D9AF250039019B /* Rocket.swift */,
+				6F7A764925D9AF5B0039019B /* RocketListServiceResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6F7A764F25D9EC5E0039019B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6F7A765025D9EC740039019B /* RocketListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6F7A765A25D9FC820039019B /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				6F1FC30E25D8519100484116 /* RocketsNavigationController.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		6F7A765B25D9FC910039019B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F7A765C25D9FC9B0039019B /* Error */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6F7A765C25D9FC9B0039019B /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				6F7A765D25D9FCAF0039019B /* ErrorView.xib */,
+				6F7A766325D9FCC50039019B /* ErrorView.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		6F7A766F25DA00AB0039019B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				6F7A767025DA00BB0039019B /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		6F7A767A25DA06E10039019B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6F7A768325DA08B50039019B /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		6F8BA3B425D7D28900EE7E2F = {
@@ -269,10 +373,12 @@
 		6F8BA51A25D7DBED00EE7E2F /* RocketLogic */ = {
 			isa = PBXGroup;
 			children = (
-				6F1FC30D25D8514E00484116 /* Components */,
-				6F8BA59225D824AB00EE7E2F /* Utils */,
 				6F8BA57625D7EE3F00EE7E2F /* ServiceLocator */,
+				6F7A761325D99B710039019B /* WebService */,
+				6F1FC30D25D8514E00484116 /* Components */,
 				6F8BA56C25D7ED0400EE7E2F /* Features */,
+				6F8BA59225D824AB00EE7E2F /* Utils */,
+				6F7A767A25DA06E10039019B /* Resources */,
 				6F8BA53B25D7DC1400EE7E2F /* HeaderFiles */,
 			);
 			path = RocketLogic;
@@ -317,6 +423,9 @@
 		6F8BA56D25D7ED0F00EE7E2F /* RocketsList */ = {
 			isa = PBXGroup;
 			children = (
+				6F7A764F25D9EC5E0039019B /* ViewModel */,
+				6F7A763E25D9AEA00039019B /* Models */,
+				6F7A763325D9AD5E0039019B /* Repository */,
 				6F8BA56F25D7ED7900EE7E2F /* ViewController */,
 				6F8BA56E25D7ED5700EE7E2F /* Coordinator */,
 			);
@@ -359,6 +468,7 @@
 		6F8BA59225D824AB00EE7E2F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6F7A766F25DA00AB0039019B /* Constants */,
 				6F1FC31E25D8558C00484116 /* Enums */,
 				6F4174FB25D83D2A00E95CBC /* Extensions */,
 				6F8BA59325D824B800EE7E2F /* Protocols */,
@@ -369,6 +479,7 @@
 		6F8BA59325D824B800EE7E2F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				6F7A766925DA00620039019B /* NibViewLoad.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -561,6 +672,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7A768425DA08B50039019B /* Assets.xcassets in Resources */,
+				6F7A765E25D9FCAF0039019B /* ErrorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,14 +739,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7A762E25D9AB7F0039019B /* WebServiceLocator.swift in Sources */,
 				6F8BA57125D7EDD000EE7E2F /* RocketListViewController.swift in Sources */,
 				6F1FC31525D853C300484116 /* Colors.swift in Sources */,
+				6F7A764025D9AF250039019B /* Rocket.swift in Sources */,
+				6F7A766A25DA00620039019B /* NibViewLoad.swift in Sources */,
 				6F1FC33B25D894F100484116 /* RocketTableViewCell.swift in Sources */,
 				6F1FC33025D8590000484116 /* Strings.swift in Sources */,
+				6F7A761525D99B990039019B /* Endpoint.swift in Sources */,
+				6F7A766425D9FCC50039019B /* ErrorView.swift in Sources */,
+				6F7A765125D9EC740039019B /* RocketListViewModel.swift in Sources */,
 				6F4174FD25D83D4E00E95CBC /* NSObject.swift in Sources */,
+				6F7A763525D9AD7D0039019B /* RocketListRepository.swift in Sources */,
+				6F7A762825D9A5FE0039019B /* WebService.swift in Sources */,
 				6F8BA58225D7EF1E00EE7E2F /* RocketsListCoordinator.swift in Sources */,
+				6F7A762225D9A3AA0039019B /* ServiceError.swift in Sources */,
+				6F7A767125DA00BB0039019B /* Constants.swift in Sources */,
 				6F41750325D83F4700E95CBC /* UIView.swift in Sources */,
 				6F8BA57825D7EE6000EE7E2F /* RocketLogicServiceLocator.swift in Sources */,
+				6F7A764A25D9AF5B0039019B /* RocketListServiceResponse.swift in Sources */,
 				6F1FC30F25D8519100484116 /* RocketsNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,3 +7,8 @@
 */
 
 "rocket_app_name" = "Rocket";
+
+"rocket_app_error_title" = "ERROR";
+"rocket_app_error_server" = "There is an invaid server response";
+"rocket_app_error_timeOut" = "The connection time has expired!";
+"rocket_app_error_general" = "An error has ocurred";

@@ -11,9 +11,13 @@ internal protocol RocketListView: class {
     var title: String? { get set }
     func showLoading()
     func hideLoading()
+    func showError(type: ResponseError)
 }
 
 class RocketListViewController: UIViewController {
+
+    // MARK: - Propierties
+    let viewModel: RocketListViewModelProtocol
 
     // MARK: - Constants
     private struct Constants {
@@ -47,14 +51,28 @@ class RocketListViewController: UIViewController {
         return activityIndicatorView
     }()
 
+    private lazy var errorView: ErrorView = {
+        let errorView = ErrorView.createView()
+        return errorView!
+    }()
+
+    // MARK: - Initializers
+    init(viewModel: RocketListViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
-        title = "rocket_app_name".localize
-        setupTableView()
-        showLoading()
+        viewModel.view = self
+        viewModel.loadView()
     }
 
     // MARK: - Setups
@@ -115,5 +133,15 @@ extension RocketListViewController: RocketListView {
 
     func hideLoading() {
         activityIndicatorView.stopAnimating()
+    }
+
+    func showError(type: ResponseError) {
+        view.addSubview(errorView)
+        errorView.anchor(top: view.topAnchor,
+                         bottom: view.bottomAnchor,
+                         left: view.leftAnchor,
+                         right: view.rightAnchor)
+
+        errorView.setup(errorType: type)
     }
 }

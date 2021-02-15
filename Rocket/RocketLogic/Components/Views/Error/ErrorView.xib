@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ErrorView" customModule="RocketLogic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBk-eC-g3j">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Za-Vm-05j">
+                            <rect key="frame" x="20" y="143" width="374" height="49"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="41"/>
+                            <color key="textColor" red="0.69803921570000005" green="0.1450980392" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is an error (key)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BV4-5y-cOI">
+                            <rect key="frame" x="20" y="198" width="374" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96R-Po-5n0">
+                            <rect key="frame" x="40" y="259" width="334" height="300"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crash_draw" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-Et-bpT">
+                                    <rect key="frame" x="0.0" y="0.0" width="334" height="300"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="dbQ-Sk-VEZ"/>
+                                <constraint firstAttribute="bottom" secondItem="tqT-Et-bpT" secondAttribute="bottom" id="oWR-Wp-UWw"/>
+                                <constraint firstItem="tqT-Et-bpT" firstAttribute="top" secondItem="96R-Po-5n0" secondAttribute="top" id="rxU-64-gh2"/>
+                                <constraint firstAttribute="trailing" secondItem="tqT-Et-bpT" secondAttribute="trailing" id="sSf-jA-31M"/>
+                                <constraint firstItem="tqT-Et-bpT" firstAttribute="leading" secondItem="96R-Po-5n0" secondAttribute="leading" id="xh5-Sh-bCS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="ColorPrimary"/>
+                    <constraints>
+                        <constraint firstItem="96R-Po-5n0" firstAttribute="centerX" secondItem="pBk-eC-g3j" secondAttribute="centerX" id="4Wd-0C-H2j"/>
+                        <constraint firstItem="96R-Po-5n0" firstAttribute="leading" secondItem="pBk-eC-g3j" secondAttribute="leading" constant="40" id="965-E8-YGu"/>
+                        <constraint firstItem="96R-Po-5n0" firstAttribute="top" secondItem="BV4-5y-cOI" secondAttribute="bottom" constant="40" id="A6g-Hq-jwy"/>
+                        <constraint firstAttribute="trailing" secondItem="8Za-Vm-05j" secondAttribute="trailing" constant="20" id="DmZ-h9-wGv"/>
+                        <constraint firstItem="8Za-Vm-05j" firstAttribute="leading" secondItem="pBk-eC-g3j" secondAttribute="leading" constant="20" id="Gad-Pr-vnr"/>
+                        <constraint firstItem="96R-Po-5n0" firstAttribute="centerY" secondItem="pBk-eC-g3j" secondAttribute="centerY" id="Neb-zr-hP5"/>
+                        <constraint firstAttribute="trailing" secondItem="BV4-5y-cOI" secondAttribute="trailing" constant="20" id="keJ-VB-jWl"/>
+                        <constraint firstItem="BV4-5y-cOI" firstAttribute="leading" secondItem="pBk-eC-g3j" secondAttribute="leading" constant="20" id="nCC-mf-dBe"/>
+                        <constraint firstItem="BV4-5y-cOI" firstAttribute="top" secondItem="8Za-Vm-05j" secondAttribute="bottom" constant="6" id="pl9-Jg-9lC"/>
+                        <constraint firstAttribute="trailing" secondItem="96R-Po-5n0" secondAttribute="trailing" constant="40" id="wQH-Yt-lMP"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="ColorPrimary"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="pBk-eC-g3j" secondAttribute="bottom" id="LQy-VK-UDc"/>
+                <constraint firstItem="pBk-eC-g3j" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="MIb-qf-geg"/>
+                <constraint firstItem="pBk-eC-g3j" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gIk-sF-0e7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pBk-eC-g3j" secondAttribute="trailing" id="qal-d8-khQ"/>
+            </constraints>
+            <connections>
+                <outlet property="descriptionLabel" destination="BV4-5y-cOI" id="GcL-1R-IWY"/>
+                <outlet property="errorImageView" destination="tqT-Et-bpT" id="FPy-4e-nPd"/>
+                <outlet property="titleLabel" destination="8Za-Vm-05j" id="w1Z-IO-02H"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="62.946428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="crash_draw" width="266.5" height="200"/>
+        <namedColor name="ColorPrimary">
+            <color red="0.3059999942779541" green="0.31799998879432678" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
