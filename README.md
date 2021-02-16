@@ -46,7 +46,7 @@ With the coordinator I pass the data that we have to show to the user. Here, we'
 (https://github.com/miquelbosch/rocket/blob/develop/Resources/Pictures/rocket_detail.png)
 
 ## Error Handle
-When we have some detected error in the app I use a enum called ErrorResponse to classificate the type of error and show it to the user.
+When we have some detected error in the app I use a enum called ResponseError to classificate the type of error and show it to the user.
 
 <img src="Resources/Pictures/error.png" width="200" height="400">
 (https://github.com/miquelbosch/rocket/blob/develop/Resources/Pictures/error.png)
@@ -54,6 +54,7 @@ When we have some detected error in the app I use a enum called ErrorResponse to
 ## Test
 I tested the app: the extensions, view models, flows of view controllers. Finally, I covered 94% of code, not bad. 
 
+<img src="Resources/Pictures/coverage.png" width="600" height="400">
 
 
 
