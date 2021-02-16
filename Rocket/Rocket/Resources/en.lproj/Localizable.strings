@@ -13,3 +13,11 @@
 "rocket_app_error_timeOut" = "The connection time has expired!";
 "rocket_app_error_general" = "An error has ocurred";
 "rocket_app_error_mapping" = "Some error mapping data";
+
+"rocket_app_info_first_flight_label" = "First Flight:";
+"rocket_app_info_country_label" = "Country:";
+
+"rocket_app_header_height_label" = "Height";
+"rocket_app_header_engines_label" = "Engines";
+
+

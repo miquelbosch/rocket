@@ -25,14 +25,25 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var countryValue: UILabel!
 
     @IBOutlet weak var heightContainerView: UIView!
-    @IBOutlet weak var heightCnt: NSLayoutConstraint!
     @IBOutlet weak var enginesConteinerView: UIView!
-    @IBOutlet weak var enginesCnt: NSLayoutConstraint!
-    @IBOutlet weak var topInformationStackView: NSLayoutConstraint!
-    @IBOutlet weak var topStackView: UIStackView!
 
     // MARK: - propierties
     private let viewModel: DetailViewModelProtocol
+
+    // MARK: - DetailConstants
+    private struct Constants {
+        private init() {}
+        static let duration: TimeInterval = 1.4
+        static let delay: TimeInterval = 0
+        static let delaySecondAnimation: TimeInterval = 0.6
+        static let usingSpringWithDamping: CGFloat = 0.8
+        static let initialSpringVelocity: CGFloat = 0.7
+        static let options: UIView.AnimationOptions = .curveEaseInOut
+        static let translationX: CGFloat = 0
+        static let translationY: CGFloat = 80
+        static let imageCornerRadius: CGFloat = 16
+        static let cardCornerRadius: CGFloat = 16
+    }
 
     // MARK: - Initializers
     init(viewModel: DetailViewModelProtocol) {
@@ -51,6 +62,22 @@ class DetailViewController: UIViewController {
         viewModel.view = self
         viewModel.setup()
     }
+
+    private func animate(to view: UIView, duration: TimeInterval = Constants.duration, delay: TimeInterval = Constants.delay,
+                         usingSpringWithDamping: CGFloat = Constants.usingSpringWithDamping, initialSpringVelocity: CGFloat = Constants.initialSpringVelocity,
+                         options: UIView.AnimationOptions = Constants.options, completion: ((Bool) -> Void)? = nil) {
+
+        view.transform =  CGAffineTransform(translationX: Constants.translationX, y: Constants.translationY)
+        view.alpha = 0
+
+        UIView.animate(withDuration: duration, delay: delay, usingSpringWithDamping: usingSpringWithDamping, initialSpringVelocity: initialSpringVelocity, options: options, animations: {
+
+            view.transform =  CGAffineTransform.identity
+            view.alpha = 1
+            view.layoutIfNeeded()
+
+        })
+    }
 }
 
 // MARK: - DetailView
@@ -58,93 +85,26 @@ extension DetailViewController: DetailView {
 
     func showImage(url: URL) {
         rocketImageView.load(url: url)
-        rocketImageView.round(.bottomRight, radius: CGFloat(76))
+        rocketImageView.round(.bottomRight, radius: Constants.imageCornerRadius)
     }
 
     func showPrincipalInformation(rocket: Rocket, firstFlight: String) {
         titleLabel.text = rocket.name
         descriptionLabel.text = rocket.description
+        firstFlightTitleLabel.text = "rocket_app_info_first_flight_label".localize
         firstFlightValue.text = firstFlight
+        countryLabel.text = "rocket_app_info_country_label".localize
         countryValue.text = rocket.country
 
-        animateViewsTwo()
+        displayAnimation()
     }
 
-    private func animation() {
+    func displayAnimation() {
 
-        topInformationStackView.constant = 0
-        heightContainerView.alpha = 0
-        topInformationStackView.constant = 80
-        enginesConteinerView.alpha = 0
+        heightContainerView.layer.cornerRadius = Constants.cardCornerRadius
+        enginesConteinerView.layer.cornerRadius = Constants.cardCornerRadius
 
-        UIView.animate(withDuration: 1.6, delay: 0.7, animations: {
-            self.heightContainerView.alpha = 1
-            self.heightContainerView.layoutIfNeeded()
-        })
-
-        UIView.animate(withDuration: 1.6, delay: 0.9, animations: {
-
-            self.enginesConteinerView.alpha = 1
-            self.enginesConteinerView.layoutIfNeeded()
-        })
-
-        heightContainerView.layer.cornerRadius = 12
-        enginesConteinerView.layer.cornerRadius = 12
-    }
-
-    func animateViews() {
-
-        heightContainerView.layer.cornerRadius = 12
-        enginesConteinerView.layer.cornerRadius = 12
-
-        let containers = [heightContainerView, enginesConteinerView]
-        topStackView.axis = .vertical
-
-        let animations = {
-            self.topStackView.axis = .horizontal
-            self.topStackView.transform =  CGAffineTransform.identity
-            self.topStackView.alpha = 1
-
-            containers.forEach { label in
-                label?.alpha = 1
-            }
-            //self.view.layoutIfNeeded()
-            self.topStackView.layoutIfNeeded()
-        }
-
-        self.topStackView.transform =  CGAffineTransform(translationX: 0, y: 4000)
-        self.topStackView.alpha = 0
-
-        containers.forEach { label in
-            label?.alpha = 0
-        }
-
-        UIView.animate(withDuration: 1.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.7, options: .curveEaseInOut, animations: animations, completion: nil)
-    }
-
-    func animateViewsTwo() {
-
-        heightContainerView.layer.cornerRadius = 12
-        enginesConteinerView.layer.cornerRadius = 12
-
-        let animationHeight = {
-            self.heightContainerView.transform =  CGAffineTransform.identity
-            self.heightContainerView.alpha = 1
-            self.heightContainerView.layoutIfNeeded()
-        }
-
-        let animationEngine = {
-            self.enginesConteinerView.transform =  CGAffineTransform.identity
-            self.enginesConteinerView.alpha = 1
-            self.enginesConteinerView.layoutIfNeeded()
-        }
-
-        self.heightContainerView.transform =  CGAffineTransform(translationX: 0, y: 60)
-        self.heightContainerView.alpha = 0
-        self.enginesConteinerView.transform =  CGAffineTransform(translationX: 0, y: 80)
-        self.enginesConteinerView.alpha = 0
-
-        UIView.animate(withDuration: 1.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.7, options: .curveEaseInOut, animations: animationHeight, completion: nil)
-        UIView.animate(withDuration: 1.4, delay: 0.5, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.7, options: .curveEaseInOut, animations: animationEngine, completion: nil)
+        animate(to: heightContainerView)
+        animate(to: enginesConteinerView, delay: Constants.delaySecondAnimation)
     }
 }
