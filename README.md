@@ -10,7 +10,7 @@ At this point, you can see that its a simple two screen app where we'd applied d
 Firstly, we have to know what type of app we want to do and what goals do you want to achieve with. Here are the main goals:
 
 * Written in Swift 5
-* Supported iOS varsion 14
+* Supported iOS version 14
 * Code rules with SwiftLint
 * Implement views by code or by Xib
 * Testability (currently, 94% of coverage)
