@@ -13,7 +13,7 @@ extension NSObject {
         return String(describing: self)
     }
 
-    static var id: String {
+    static var unicID: String {
         return name + "ID"
     }
 }
