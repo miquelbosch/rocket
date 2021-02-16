@@ -56,6 +56,10 @@ I tested the app: the extensions, view models, flows of view controllers. Finall
 
 <img src="Resources/Pictures/coverage.png" width="600" height="400">
 
+## Reach me via 👇🏻
+
+ [![Linkedin](https://raw.githubusercontent.com/Shubham0812/SearchX/master/linkedIn.png)](https://www.linkedin.com/in/miquelboschcortes/)
+
 
 
 
