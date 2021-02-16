@@ -95,7 +95,16 @@ class DetailViewController: UIViewController {
 extension DetailViewController: DetailView {
 
     func showImage(url: URL) {
-        rocketImageView.load(url: url)
+
+        heightContainerView.isHidden = true
+        enginesConteinerView.isHidden = true
+        rocketImageView.alpha = 0.6
+
+        rocketImageView.load(url: url) {
+            DispatchQueue.main.async {
+                self.displayAnimation()
+            }
+        }
     }
 
     func showPrincipalInformation(rocket: Rocket, firstFlight: String) {
@@ -109,14 +118,14 @@ extension DetailViewController: DetailView {
         heightValue.text = rocket.height
         enginesLabel.text = "rocket_app_header_engines_label".localize
         enginesValue.text = rocket.engines
-
-        displayAnimation()
     }
 
     func displayAnimation() {
-
         heightContainerView.layer.cornerRadius = Constants.cardCornerRadius
         enginesConteinerView.layer.cornerRadius = Constants.cardCornerRadius
+        heightContainerView.isHidden = false
+        enginesConteinerView.isHidden = false
+        rocketImageView.alpha = 1
 
         animate(to: heightContainerView)
         animate(to: enginesConteinerView, delay: Constants.delaySecondAnimation)

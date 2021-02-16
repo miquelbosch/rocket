@@ -109,13 +109,16 @@ extension UIView {
 
 extension UIImageView {
     
-    func load(url: URL) {
+    func load(url: URL, completion: (() -> Void)? = nil) {
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url),
                let image = UIImage(data: data) {
                 DispatchQueue.main.async {
                     self?.image = image
                     self?.alpha = 1
+                    if let completion = completion {
+                        completion()
+                    }
                 }
             }
         }

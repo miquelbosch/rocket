@@ -62,6 +62,21 @@ class UIViewTest: XCTestCase {
 
         //THEN
         XCTAssertNotNil(parentView.layer)
+    }
 
+    func test_round_imgageLoad_success() {
+
+        // GIVEN
+        let url = URL(string: "https://farm1.staticflickr.com/929/28787338307_3453a11a77_b.jpg")
+        let expectationImageLoad = expectation(description: "RocketListImageLoad")
+        let imageView = UIImageView()
+
+        //WHEN
+        imageView.load(url: url!) {
+            expectationImageLoad.fulfill()
+        }
+
+        //THEN
+        wait(for: [expectationImageLoad], timeout: 8)
     }
 }

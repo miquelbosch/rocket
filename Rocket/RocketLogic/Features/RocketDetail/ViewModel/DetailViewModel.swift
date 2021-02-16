@@ -29,7 +29,7 @@ final class DetailViewModel: DetailViewModelProtocol {
         setInformation()
     }
 
-    private func setupTitle() {
+    func setupTitle() {
         view?.title = rocket.name
     }
 
