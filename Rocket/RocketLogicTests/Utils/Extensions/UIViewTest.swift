@@ -40,7 +40,7 @@ class UIViewTest: XCTestCase {
 
     func test_center_to_Y_success() {
 
-        // GIVEN
+        //GIVEN
         let parentView = UIView(frame: .zero)
         let childView = UIView(frame: .zero)
         parentView.addSubview(childView)
@@ -50,5 +50,18 @@ class UIViewTest: XCTestCase {
 
         //THEN
         XCTAssertNotNil(childView.centerYAnchor)
+    }
+
+    func test_round_corners_success() {
+
+        // GIVEN
+        let parentView = UIView(frame: .zero)
+
+        //WHEN
+        parentView.round(.topLeft, radius: CGFloat(18))
+
+        //THEN
+        XCTAssertNotNil(parentView.layer)
+
     }
 }
