@@ -46,6 +46,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crash_draw" translatesAutoresizingMaskIntoConstraints="NO" id="Mwl-Sn-kzJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="detailPictureID"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Mwl-Sn-kzJ" secondAttribute="height" multiplier="1:1" id="Kq4-iL-wfE"/>
                                                     </constraints>

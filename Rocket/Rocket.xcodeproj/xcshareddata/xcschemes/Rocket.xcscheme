@@ -59,6 +59,16 @@
                ReferencedContainer = "container:Rocket.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6F19DA8125DC16A10002A58F"
+               BuildableName = "RocketLogicUITests.xctest"
+               BlueprintName = "RocketLogicUITests"
+               ReferencedContainer = "container:Rocket.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

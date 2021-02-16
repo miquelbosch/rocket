@@ -36,6 +36,7 @@ class RocketListViewController: UIViewController {
     private lazy var tableView: UITableView = {
 
         let tableView = UITableView()
+        tableView.accessibilityIdentifier = UITableView.id
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = UITableView.automaticDimension

@@ -51,6 +51,7 @@ class RocketTableViewCell: UITableViewCell {
         let label = UILabel(frame: .zero)
         label.numberOfLines = 1
         label.textAlignment = .left
+        label.accessibilityIdentifier = RocketTableViewCell.name + UILabel.id
         return label
     }()
 
@@ -68,6 +69,7 @@ class RocketTableViewCell: UITableViewCell {
     public func setup(rocket: Rocket) {
         titleLabel.text = rocket.name
         setImageView(name: rocket.image)
+        accessibilityIdentifier = RocketTableViewCell.id
     }
 
     private func constraintsCardView() {

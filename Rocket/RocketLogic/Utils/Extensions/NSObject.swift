@@ -12,4 +12,8 @@ extension NSObject {
     static var name: String {
         return String(describing: self)
     }
+
+    static var id: String {
+        return name + "ID"
+    }
 }
