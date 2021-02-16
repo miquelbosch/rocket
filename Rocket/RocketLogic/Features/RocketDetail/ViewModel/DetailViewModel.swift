@@ -39,7 +39,11 @@ final class DetailViewModel: DetailViewModelProtocol {
     }
 
     private func setInformation() {
-        let firstFlight = DateManager.date(original: rocket.firstFlight, to: .ddMMyyyy)
+        let firstFlight = getFirstFlightFormat()
         view?.showPrincipalInformation(rocket: rocket, firstFlight: firstFlight)
+    }
+
+    private func getFirstFlightFormat() -> String {
+        return DateManager.date(original: rocket.firstFlight, to: .ddMMyyyy)
     }
 }

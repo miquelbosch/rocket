@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6F19DA3625DB261A0002A58F /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19DA3525DB261A0002A58F /* DetailCoordinator.swift */; };
 		6F19DA3D25DB26620002A58F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19DA3C25DB26620002A58F /* DetailViewModel.swift */; };
+		6F19DA5E25DBD1600002A58F /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19DA5D25DBD1600002A58F /* Int.swift */; };
 		6F1FC2FF25D8478300484116 /* NSObjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1FC2FE25D8478300484116 /* NSObjectTest.swift */; };
 		6F1FC30F25D8519100484116 /* RocketsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1FC30E25D8519100484116 /* RocketsNavigationController.swift */; };
 		6F1FC31525D853C300484116 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1FC31425D853C300484116 /* Colors.swift */; };
@@ -115,6 +116,7 @@
 /* Begin PBXFileReference section */
 		6F19DA3525DB261A0002A58F /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 		6F19DA3C25DB26620002A58F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		6F19DA5D25DBD1600002A58F /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		6F1FC2FE25D8478300484116 /* NSObjectTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectTest.swift; sourceTree = "<group>"; };
 		6F1FC30E25D8519100484116 /* RocketsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsNavigationController.swift; sourceTree = "<group>"; };
 		6F1FC31425D853C300484116 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				6F4174FC25D83D4E00E95CBC /* NSObject.swift */,
 				6F41750225D83F4700E95CBC /* UIView.swift */,
 				6F1FC32F25D8590000484116 /* Strings.swift */,
+				6F19DA5D25DBD1600002A58F /* Int.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -933,6 +936,7 @@
 				6F7A767125DA00BB0039019B /* Constants.swift in Sources */,
 				6F41750325D83F4700E95CBC /* UIView.swift in Sources */,
 				6F8BA57825D7EE6000EE7E2F /* RocketLogicServiceLocator.swift in Sources */,
+				6F19DA5E25DBD1600002A58F /* Int.swift in Sources */,
 				6F7A764A25D9AF5B0039019B /* RocketListServiceResponse.swift in Sources */,
 				6F1FC30F25D8519100484116 /* RocketsNavigationController.swift in Sources */,
 			);

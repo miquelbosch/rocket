@@ -46,10 +46,7 @@ private class RocketListRepositoryMock: RocketListRepositoryProtocol {
     public var forceError: Bool = false
 
     func rocketList(completion completed: @escaping (Result<Rockets, ResponseError>) -> Void) {
-
-        let units = Constants.RocketDefault.units
-        let engines = Constants.RocketDefault.engines
-        let rocket = Rocket(height: units, engines: engines, name: "Filomena 9398", firstFlight: Date(), description: "First Rocket", country: "Spain", company: "Covadonga", image: "https://www.test.com")
+        let rocket = Rocket(height: "0", engines: "0", name: "Filomena 9398", firstFlight: Date(), description: "First Rocket", country: "Spain", company: "Covadonga", image: "https://www.test.com")
         let rockets = Rockets(rockets: [rocket])
 
         forceError ? completed(.failure(.general)) : completed(.success(rockets))

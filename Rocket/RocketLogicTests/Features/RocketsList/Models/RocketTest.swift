@@ -46,10 +46,10 @@ class RocketTest: XCTestCase {
         let nameTwo = sut.rockets.last?.name ?? Constants.CrossFeature.nilChar
         XCTAssertEqual(nameTwo, "Falconero 14", "The rocket name \(nameTwo) doesn't match.")
 
-        XCTAssertEqual(sut.rockets.first?.height.feet, units?.feet)
-        XCTAssertEqual(sut.rockets.last?.height.feet, units?.feet)
-        XCTAssertEqual(sut.rockets.first?.engines.number, engines?.number)
-        XCTAssertEqual(sut.rockets.last?.engines.number, enginesTwo.number)
+        XCTAssertEqual(sut.rockets.first?.height, "0.0 cm")
+        XCTAssertEqual(sut.rockets.last?.height, "0.0 cm")
+        XCTAssertEqual(sut.rockets.first?.engines, "0")
+        XCTAssertEqual(sut.rockets.last?.engines, "4")
         XCTAssertEqual(sut.rockets.first?.description, "Lorem ipsum dolor sit amet, consectetur adipiscing elit")
         XCTAssertEqual(sut.rockets.last?.description, "Lorem ipsum dolor sit amet, consectetur adipiscing elit")
         XCTAssertEqual(sut.rockets.first?.country, "Spain")
@@ -72,10 +72,10 @@ class RocketTest: XCTestCase {
         let sut = RocketsResponseBinding.bind(response)
 
         //THEN
-        XCTAssertEqual(sut.rockets.first?.height.feet, Constants.CrossFeature.zeroDouble)
-        XCTAssertEqual(sut.rockets.last?.height.feet, Constants.CrossFeature.zeroDouble)
-        XCTAssertEqual(sut.rockets.first?.engines.number, Constants.CrossFeature.zeroInt)
-        XCTAssertEqual(sut.rockets.last?.engines.number, Constants.CrossFeature.zeroInt)
+        XCTAssertEqual(sut.rockets.first?.height, Constants.CrossFeature.nilChar)
+        XCTAssertEqual(sut.rockets.last?.height, Constants.CrossFeature.nilChar)
+        XCTAssertEqual(sut.rockets.first?.engines, Constants.CrossFeature.nilChar)
+        XCTAssertEqual(sut.rockets.last?.engines, Constants.CrossFeature.nilChar)
         XCTAssertEqual(sut.rockets.first?.description, Constants.CrossFeature.nilChar)
         XCTAssertEqual(sut.rockets.last?.description, Constants.CrossFeature.nilChar)
         XCTAssertEqual(sut.rockets.first?.country, Constants.CrossFeature.nilChar)

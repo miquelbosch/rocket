@@ -13,8 +13,8 @@ struct Rockets {
 
 struct Rocket {
 
-    let height: Units
-    let engines: Engines
+    let height: String
+    let engines: String
     let name: String
     let firstFlight: Date
     let description: String
@@ -29,11 +29,11 @@ internal final class RocketsResponseBinding {
     class func bind(_ rocketsRespone: [RocketListServiceResponse]) -> Rockets {
 
         let rockets: [Rocket] = rocketsRespone.map {
-            let defaultUnits = Constants.RocketDefault.units
-            let defaultengines = Constants.RocketDefault.engines
+
+            let height = heightToString(height: $0.height?.meters)
             let firstFlight =  $0.firstFlight ?? Constants.CrossFeature.nilChar
-            return Rocket(height: $0.height ?? defaultUnits,
-                          engines: $0.engines ?? defaultengines,
+            return Rocket(height: height,
+                          engines: $0.engines?.number?.toString ?? Constants.CrossFeature.nilChar,
                           name: $0.name ?? Constants.CrossFeature.nilChar,
                           firstFlight: DateManager.date(original: firstFlight, to: .yyyyMMdd),
                           description: $0.description ?? Constants.CrossFeature.nilChar,
@@ -43,5 +43,14 @@ internal final class RocketsResponseBinding {
         }
 
         return Rockets(rockets: rockets)
+    }
+
+    private class func heightToString(height: Double?) -> String {
+
+        guard let height = height else {
+            return Constants.CrossFeature.nilChar
+        }
+
+        return  String(height) + Constants.CrossFeature.centimeters
     }
 }

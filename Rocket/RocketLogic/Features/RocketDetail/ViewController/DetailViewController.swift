@@ -26,6 +26,10 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var heightContainerView: UIView!
     @IBOutlet weak var enginesConteinerView: UIView!
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var heightValue: UILabel!
+    @IBOutlet weak var enginesLabel: UILabel!
+    @IBOutlet weak var enginesValue: UILabel!
 
     // MARK: - propierties
     private let viewModel: DetailViewModelProtocol
@@ -61,6 +65,13 @@ class DetailViewController: UIViewController {
 
         viewModel.view = self
         viewModel.setup()
+        roundCornerViews()
+    }
+
+    private func roundCornerViews() {
+        rocketImageView.round(.bottomRight, radius: Constants.imageCornerRadius)
+        heightContainerView.layer.cornerRadius = Constants.cardCornerRadius
+        enginesConteinerView.layer.cornerRadius = Constants.cardCornerRadius
     }
 
     private func animate(to view: UIView, duration: TimeInterval = Constants.duration, delay: TimeInterval = Constants.delay,
@@ -85,7 +96,6 @@ extension DetailViewController: DetailView {
 
     func showImage(url: URL) {
         rocketImageView.load(url: url)
-        rocketImageView.round(.bottomRight, radius: Constants.imageCornerRadius)
     }
 
     func showPrincipalInformation(rocket: Rocket, firstFlight: String) {
@@ -95,6 +105,10 @@ extension DetailViewController: DetailView {
         firstFlightValue.text = firstFlight
         countryLabel.text = "rocket_app_info_country_label".localize
         countryValue.text = rocket.country
+        heightLabel.text = "rocket_app_header_height_label".localize
+        heightValue.text = rocket.height
+        enginesLabel.text = "rocket_app_header_engines_label".localize
+        enginesValue.text = rocket.engines
 
         displayAnimation()
     }

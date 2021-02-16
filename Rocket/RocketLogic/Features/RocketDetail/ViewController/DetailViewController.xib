@@ -15,9 +15,13 @@
                 <outlet property="countryValue" destination="iqt-tb-xVS" id="2FL-Y0-isJ"/>
                 <outlet property="descriptionLabel" destination="rcH-FI-Eld" id="Knh-xH-9Kt"/>
                 <outlet property="enginesConteinerView" destination="9S2-N9-IQ1" id="e2l-vV-Lpy"/>
+                <outlet property="enginesLabel" destination="E8O-Fq-cUM" id="Zv9-6R-BWb"/>
+                <outlet property="enginesValue" destination="nKl-lt-U8W" id="JvW-pB-fva"/>
                 <outlet property="firstFlightTitleLabel" destination="Gz7-zp-knw" id="xLV-UH-GY0"/>
                 <outlet property="firstFlightValue" destination="I3Z-cH-JMd" id="r6W-Ku-7dk"/>
                 <outlet property="heightContainerView" destination="ipZ-R4-4N5" id="h6w-2W-bwH"/>
+                <outlet property="heightLabel" destination="sZI-k9-SQd" id="gT1-fa-DuD"/>
+                <outlet property="heightValue" destination="p45-1y-fiI" id="x5k-4f-fcg"/>
                 <outlet property="rocketImageView" destination="Mwl-Sn-kzJ" id="7DX-lB-Kbg"/>
                 <outlet property="titleLabel" destination="8kD-Ve-KFe" id="znl-5T-9sd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
