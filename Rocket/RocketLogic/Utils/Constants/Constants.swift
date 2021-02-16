@@ -15,7 +15,7 @@ internal struct Constants {
         static let zeroInt: Int = 0
         static let nilChar: String = "-"
         static let noData: String = ""
-        static let centimeters: String = " cm"
+        static let meters: String = " m"
     }
 
     // MARK: - Rocket Data Constants

@@ -51,6 +51,6 @@ internal final class RocketsResponseBinding {
             return Constants.CrossFeature.nilChar
         }
 
-        return  String(height) + Constants.CrossFeature.centimeters
+        return  String(height) + Constants.CrossFeature.meters
     }
 }

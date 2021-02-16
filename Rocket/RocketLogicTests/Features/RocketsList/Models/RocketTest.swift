@@ -46,8 +46,8 @@ class RocketTest: XCTestCase {
         let nameTwo = sut.rockets.last?.name ?? Constants.CrossFeature.nilChar
         XCTAssertEqual(nameTwo, "Falconero 14", "The rocket name \(nameTwo) doesn't match.")
 
-        XCTAssertEqual(sut.rockets.first?.height, "0.0 cm")
-        XCTAssertEqual(sut.rockets.last?.height, "0.0 cm")
+        XCTAssertEqual(sut.rockets.first?.height, "0.0 m")
+        XCTAssertEqual(sut.rockets.last?.height, "0.0 m")
         XCTAssertEqual(sut.rockets.first?.engines, "0")
         XCTAssertEqual(sut.rockets.last?.engines, "4")
         XCTAssertEqual(sut.rockets.first?.description, "Lorem ipsum dolor sit amet, consectetur adipiscing elit")

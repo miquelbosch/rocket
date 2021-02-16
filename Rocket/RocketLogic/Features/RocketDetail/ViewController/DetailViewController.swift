@@ -45,7 +45,7 @@ class DetailViewController: UIViewController {
         static let options: UIView.AnimationOptions = .curveEaseInOut
         static let translationX: CGFloat = 0
         static let translationY: CGFloat = 80
-        static let imageCornerRadius: CGFloat = 16
+        static let imageCornerRadius: CGFloat = 66
         static let cardCornerRadius: CGFloat = 16
     }
 

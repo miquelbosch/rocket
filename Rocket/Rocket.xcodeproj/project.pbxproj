@@ -10,6 +10,7 @@
 		6F19DA3625DB261A0002A58F /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19DA3525DB261A0002A58F /* DetailCoordinator.swift */; };
 		6F19DA3D25DB26620002A58F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19DA3C25DB26620002A58F /* DetailViewModel.swift */; };
 		6F19DA5E25DBD1600002A58F /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19DA5D25DBD1600002A58F /* Int.swift */; };
+		6F19DA6A25DBDC7D0002A58F /* DetailCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19DA6925DBDC7D0002A58F /* DetailCoordinatorTest.swift */; };
 		6F1FC2FF25D8478300484116 /* NSObjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1FC2FE25D8478300484116 /* NSObjectTest.swift */; };
 		6F1FC30F25D8519100484116 /* RocketsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1FC30E25D8519100484116 /* RocketsNavigationController.swift */; };
 		6F1FC31525D853C300484116 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1FC31425D853C300484116 /* Colors.swift */; };
@@ -116,6 +117,7 @@
 		6F19DA3525DB261A0002A58F /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 		6F19DA3C25DB26620002A58F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		6F19DA5D25DBD1600002A58F /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		6F19DA6925DBDC7D0002A58F /* DetailCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinatorTest.swift; sourceTree = "<group>"; };
 		6F1FC2FE25D8478300484116 /* NSObjectTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectTest.swift; sourceTree = "<group>"; };
 		6F1FC30E25D8519100484116 /* RocketsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsNavigationController.swift; sourceTree = "<group>"; };
 		6F1FC31425D853C300484116 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -220,6 +222,22 @@
 				6F19DA3C25DB26620002A58F /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6F19DA6725DBDC360002A58F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				6F19DA6825DBDC3D0002A58F /* Coordinator */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		6F19DA6825DBDC3D0002A58F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6F19DA6925DBDC7D0002A58F /* DetailCoordinatorTest.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		6F1FC2F525D8467600484116 /* Utils */ = {
@@ -365,6 +383,7 @@
 		6F7A769825DA93FE0039019B /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				6F19DA6725DBDC360002A58F /* Detail */,
 				6F7A769925DA941B0039019B /* RocketsList */,
 			);
 			path = Features;
@@ -947,6 +966,7 @@
 				6F8BA52925D7DBED00EE7E2F /* RocketLogicTests.swift in Sources */,
 				6F7A76B825DAEBB50039019B /* NibViewLoadTest.swift in Sources */,
 				6F7A76D225DAF17D0039019B /* ResponseErrorTest.swift in Sources */,
+				6F19DA6A25DBDC7D0002A58F /* DetailCoordinatorTest.swift in Sources */,
 				6F7A76A625DA949A0039019B /* RocketTest.swift in Sources */,
 				6F7A76E625DAF7720039019B /* ErrorViewTest.swift in Sources */,
 				6F7A76D925DAF3900039019B /* DateManagerTest.swift in Sources */,
