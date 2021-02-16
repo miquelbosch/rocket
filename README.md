@@ -30,18 +30,19 @@ Another patterns or rules that we'd followed are: don't use any third resource (
 ## First Screen: Rockets List
 It's the main screen of the app who call the service and show the results in a tableView. I created a protocol to update the view, allowing to stablish the connection between the view controller and the view model. 
 
-(photo)
+(https://github.com/miquelbosch/rocket/blob/develop/Resources/Pictures/rockets_list.png)
+
 We'd handled the errors, you can see in the Error Handle section.
 
 For the image load, as I said previously, I didn't use any third library. I experiment that this api, without keys allways return a short list of rockets. For this reason, I didn't used any third party or make a strong image loader with cache, it's simple for this particular case. If you run the app the first load will be slightly slower than if you run several times the app. 
 
 ## Second Screen: Rocket Detail
 With the coordinator I pass the data that we have to show to the user. Here, we'd implemented an animation that only will be displayed if the image is loaded successfully.
-(photo)
+(https://github.com/miquelbosch/rocket/blob/develop/Resources/Pictures/rocket_detail.png)
 
 ## Error Handle
 When we have some detected error in the app I use a enum called ErrorResponse to classificate the type of error and show it to the user.
-(photo)
+(https://github.com/miquelbosch/rocket/blob/develop/Resources/Pictures/error.png)
 
 ## Test
 I tested the app: the extensions, view models, flows of view controllers. Finally, I covered 94% of code, not bad. 
